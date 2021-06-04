@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+
+        }
+
+		.main{
+		 width:250px;
+		 margin:10px auto 0 auto;
+		 padding:10px 20px;
+		 box-shadow:inset 2px 2px 5px gray;
+		 font-weight:600;
+		 border:none;
+		 display:flex;
+		 align-items:center;
+		}
+
+        body {
+            background: #17181a;
+        }
+
+        .contin {
+            width: 500px;
+            margin: 5%  auto 0 auto;
+        }
+
+        .cbody {
+            width: 300px;
+             padding:0;
+			       margin: auto;
+            min-height: 500px;
+            border: solid 2px dodgerblue;
+            box-shadow: 5px 8px 50px 7px black;
+            border-radius: 15px;
+        }
+          .main{
+            height: 55px;
+            width:90%;
+            background-color:#7FFFD4;
+            font-size: 25px;
+            font-weight: lighter;
+            border-radius: 10px;
+            box-shadow: 5px 8px 20px 5px #DCDCDC inset;
+          }
+
+        .cbutton {
+            width: 100%;
+            background-color: #222427;
+
+        }
+		form{
+		padding:0;
+
+		}
+
+        .button {
+            font-size: 31px;
+            width: 72px;
+            background: #222427;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            text-align: center;
+            vertical-align: middle;
+            margin-right:-4px;
+            margin-bottom: -4px;
+            border-right: solid 2px #3c4857;
+            border-bottom: solid 2px #3c4857;
+            border-radius: 20px;
+            box-shadow: 5px 1px 5px 0px#008B8B;
+        }
+
+        .button.o {
+            color: #fff9f3;
+            background: #ff9500;
+        }
+
+        .button.c {
+            color:#f6444e;
+            background:#2d191e;
+
+        }
+
+        .button:hover {
+            color: green;
+        }
+
+        .button.o:hover {
+            color: Turquoise;
+        }
+
+        .button.c:hover {
+            color: Turquoise;
+        }
+        .button.e{
+          background-color: #2ec973;
+          color: white;
+        }
+
+        .button.e:hover {
+            color:red;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="contin">
+
+        <div class="cbody">
+            <form action="" name = "calculator">
+				<input type="text" name="display" class = "main" id="display" readonly placeholder="0"><br>
+
+      	<table>
+					<tr>
+					<td><input type="button" value="7" class="button" onclick="calculator.display.value += '7'"></td>
+				<td><input type="button" value="8" class="button" onclick="calculator.display.value += '8'"></td>
+				<td><input type="button" value="9" class="button" onclick="calculator.display.value += '9'"></td>
+				<td><input type="button" value="+" class="button o" onclick="calculator.display.value += '+'"></td>
+						</tr><tr>
+
+				<td><input type="button" value="4" class="button" onclick="calculator.display.value += '4'"></td>
+				<td><input type="button" value="5" class="button" onclick="calculator.display.value += '5'"></td>
+				<td><input type="button" value="6" class="button" onclick="calculator.display.value += '6'"></td>
+				<td><input type="button" value="-" class="button o" onclick="calculator.display.value += '-'">	</td>
+			</tr>
+
+			   <tr>
+				<td><input type="button" value="1" class="button" onclick="calculator.display.value += '1'"></td>
+				<td><input type="button" value="2" class="button" onclick="calculator.display.value += '2'"></td>
+				<td><input type="button" value="3" class="button" onclick="calculator.display.value += '3'"></td>
+				<td><input type="button" value="x" class="button o" onclick="calculator.display.value += '*'"></td>
+			</tr>
+
+				</tr>
+
+			   <tr>
+				<td><input type="button" value="(" class="button" onclick="calculator.display.value += '('"></td>  <!-- calculator.display.value.slice(0,-1) -->
+				<td><input type="button" value=")" class="button" onclick="calculator.display.value += ')'"></td>
+				<td><input type="button" value="." class="button" onclick="calculator.display.value += '.'"></td>
+				<td><input type="button" value="%" class="button o" onclick="calculator.display.value += '%'"></td>
+			</tr>
+
+
+				<tr>
+				<td><input type="button" value="C" class="button c" onclick="calculator.display.value = ''"></td>
+				<td><input type="button" value="0" class="button" onclick="calculator.display.value += '0'"></td>
+				<td><input type="button" value="=" class="button e" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+				<td><input type="button" value="/" class="button o" onclick="calculator.display.value += '/'">	</td>
+			</tr>
+
+
+				</table>
+			</form>
+        </div>
+    </div>
+
+</body>
+</html>
